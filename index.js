@@ -43,7 +43,7 @@ co(function*() {
         output: 'SIGMOID'
     },
   });
-  const trainingData = fanny.createTrainingData(dataset.slice(1, 30000));
+  const trainingData = fanny.createTrainingData(dataset);
   console.log('start training');
   console.time('train');
   yield ann.train(trainingData, { maxEpochs: 100, desiredError: 0.01 }, console.log)
